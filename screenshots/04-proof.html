@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Latency Budget Enforcer Proof</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1014;
+      --panel: #161d24;
+      --card: #1f2832;
+      --terminal: #0b1116;
+      --border: #31414f;
+      --text: #f3eee6;
+      --muted: #b6c1ca;
+      --blue: #8edbff;
+      --lime: #c6f18e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      width: 1600px;
+      height: 900px;
+      overflow: hidden;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #0b1014, #090c10 82%);
+      color: var(--text);
+    }
+    .frame {
+      width: 1520px;
+      height: 820px;
+      margin: 40px;
+      padding: 40px 42px;
+      border-radius: 34px;
+      border: 1px solid #25323d;
+      background: rgba(22, 29, 36, 0.96);
+    }
+    .eyebrow {
+      color: var(--lime);
+      font-size: 18px;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 24px 0 20px;
+      max-width: 1180px;
+      font: 700 48px/1.06 Georgia, "Times New Roman", serif;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 1.06fr .94fr;
+      gap: 18px;
+      height: 644px;
+    }
+    .panel {
+      border-radius: 28px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      padding: 24px 26px;
+    }
+    .panel-label {
+      color: var(--blue);
+      font-size: 14px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .terminal {
+      margin-top: 16px;
+      border-radius: 20px;
+      border: 1px solid #3b4f5f;
+      background: var(--terminal);
+      padding: 18px 20px;
+      color: var(--lime);
+      font: 17px/1.46 Consolas, monospace;
+      white-space: pre-wrap;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .stat {
+      border-radius: 18px;
+      background: #171f27;
+      border: 1px solid #2f4050;
+      padding: 16px 18px;
+    }
+    .stat-title {
+      color: #dde7ef;
+      font-size: 14px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .stat-value {
+      margin-top: 10px;
+      font: 700 38px/1 Georgia, "Times New Roman", serif;
+    }
+    .stat-copy {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.28;
+    }
+    .notes {
+      margin: 18px 0 0;
+      padding-left: 18px;
+      color: #edf2f6;
+      font-size: 18px;
+      line-height: 1.46;
+    }
+    .notes li + li { margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="eyebrow">Validation Proof</div>
+    <h1>Real API output, real go test coverage, and an enforcement shape that holds up outside the README.</h1>
+    <div class="layout">
+      <div class="panel">
+        <div class="panel-label">CLI and Test Evidence</div>
+        <div class="terminal">&gt; go test ./...
+ok github.com/mizcausevic-dev/latency-budget-enforcer/internal/engine
+
+&gt; go run ./cmd/server -mode cli
+System: growth-systems-control-room
+Observations analyzed: 8
+Overall score: 92
+
+[CRITICAL] sustained_breach (score 92)
+[HIGH] error_pressure_coupling (score 86)
+[HIGH] p99_breach (score 84)
+[HIGH] p95_drift (score 81)
+[MODERATE] dependency_drag (score 67)</div>
+      </div>
+      <div class="panel">
+        <div class="panel-label">Why It Matters</div>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-title">Stdlib Shape</div>
+            <div class="stat-value">net/http</div>
+            <div class="stat-copy">The repo stays infrastructure-grade without framework sprawl.</div>
+          </div>
+          <div class="stat">
+            <div class="stat-title">Output Modes</div>
+            <div class="stat-value">2</div>
+            <div class="stat-copy">HTTP responses plus operator-friendly CLI summaries.</div>
+          </div>
+          <div class="stat">
+            <div class="stat-title">Issue Families</div>
+            <div class="stat-value">5</div>
+            <div class="stat-copy">Budget, tail, dependency, and error-coupling control.</div>
+          </div>
+          <div class="stat">
+            <div class="stat-title">Severity Shape</div>
+            <div class="stat-value">Ranked</div>
+            <div class="stat-copy">Teams can see what path deserves action first.</div>
+          </div>
+        </div>
+        <ul class="notes">
+          <li>This is latency governance modeled as an operational enforcement problem, not a decorative performance summary.</li>
+          <li>The repo broadens the portfolio with a real Go backend for platform and performance control work.</li>
+          <li>The sample budget is opinionated enough to show p95 drift, p99 breach, dependency drag, and error coupling in one pass.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

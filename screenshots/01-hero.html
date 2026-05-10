@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Latency Budget Enforcer Hero</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1014;
+      --panel: #161d24;
+      --panel-2: #1f2832;
+      --border: #31414f;
+      --text: #f3eee6;
+      --muted: #b6c1ca;
+      --accent: #8edbff;
+      --accent-2: #ffd598;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      width: 1600px;
+      height: 900px;
+      overflow: hidden;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, #16313a, transparent 34%),
+        linear-gradient(180deg, #0b1014, #090c10 78%);
+      color: var(--text);
+    }
+    .frame {
+      width: 1520px;
+      height: 820px;
+      margin: 40px;
+      padding: 42px 46px;
+      border-radius: 34px;
+      border: 1px solid #25323d;
+      background: rgba(22, 29, 36, 0.96);
+    }
+    .eyebrow {
+      color: var(--accent);
+      font-size: 18px;
+      letter-spacing: .34em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 24px 0 14px;
+      max-width: 1180px;
+      font: 700 60px/1.03 Georgia, "Times New Roman", serif;
+    }
+    .lead {
+      margin: 0;
+      max-width: 1140px;
+      color: var(--muted);
+      font-size: 26px;
+      line-height: 1.38;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+    .metric {
+      height: 164px;
+      padding: 22px 24px;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+    }
+    .metric-label {
+      color: #d8ebf7;
+      font-size: 14px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .metric-value {
+      margin-top: 24px;
+      font: 700 58px/1 Georgia, "Times New Roman", serif;
+    }
+    .metric-copy {
+      margin-top: 10px;
+      color: #dbe3ea;
+      font-size: 18px;
+      line-height: 1.28;
+    }
+    .lane {
+      margin-top: 22px;
+      padding: 26px 30px;
+      border-radius: 28px;
+      border: 1px solid #3b5464;
+      background: #182129;
+    }
+    .section-label {
+      color: var(--accent-2);
+      font-size: 14px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+    }
+    .lane h2 {
+      margin: 14px 0 12px;
+      max-width: 1180px;
+      font: 700 42px/1.08 Georgia, "Times New Roman", serif;
+    }
+    .lane p {
+      margin: 0;
+      max-width: 1160px;
+      color: var(--muted);
+      font-size: 22px;
+      line-height: 1.36;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="eyebrow">Latency Budget Enforcer</div>
+    <h1>Catch path-level latency budget failures before they become accepted operating behavior.</h1>
+    <p class="lead">A Go backend for p95 and p99 budget enforcement, dependency drag review, error-pressure coupling, and service-path response planning.</p>
+    <section class="metrics">
+      <div class="metric">
+        <div class="metric-label">Observations</div>
+        <div class="metric-value">8</div>
+        <div class="metric-copy">Measured service-path samples in scope</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Issue Families</div>
+        <div class="metric-value">5</div>
+        <div class="metric-copy">Distinct enforcement lanes triggered</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Owner</div>
+        <div class="metric-value">1</div>
+        <div class="metric-copy">Primary platform team responsible</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Overall Score</div>
+        <div class="metric-value">92</div>
+        <div class="metric-copy">Critical latency governance breach</div>
+      </div>
+    </section>
+    <section class="lane">
+      <div class="section-label">Current Enforcement Lane</div>
+      <h2>Sustained p95 overage, tail breaches, dependency drag, and rising error pressure are all touching the same control path.</h2>
+      <p>The service is designed to explain where latency governance is breaking down, not just whether a graph looks slower this week.</p>
+    </section>
+  </div>
+</body>
+</html>

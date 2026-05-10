@@ -1,0 +1,73 @@
+{
+  "system_name": "growth-systems-control-room",
+  "service_owner": "platform-performance",
+  "p95_budget_ms": 280,
+  "p99_budget_ms": 450,
+  "max_error_rate": 1.5,
+  "observations": [
+    {
+      "path": "/api/executive-summary",
+      "p95_ms": 318,
+      "p99_ms": 511,
+      "error_rate": 0.7,
+      "dependency_ms": 126,
+      "region": "us-east"
+    },
+    {
+      "path": "/api/executive-summary",
+      "p95_ms": 334,
+      "p99_ms": 547,
+      "error_rate": 1.1,
+      "dependency_ms": 148,
+      "region": "us-west"
+    },
+    {
+      "path": "/api/briefing-pack",
+      "p95_ms": 286,
+      "p99_ms": 469,
+      "error_rate": 0.9,
+      "dependency_ms": 101,
+      "region": "us-east"
+    },
+    {
+      "path": "/api/briefing-pack",
+      "p95_ms": 351,
+      "p99_ms": 580,
+      "error_rate": 1.9,
+      "dependency_ms": 184,
+      "region": "eu-west"
+    },
+    {
+      "path": "/api/segment-map",
+      "p95_ms": 274,
+      "p99_ms": 428,
+      "error_rate": 0.4,
+      "dependency_ms": 93,
+      "region": "us-east"
+    },
+    {
+      "path": "/api/segment-map",
+      "p95_ms": 309,
+      "p99_ms": 462,
+      "error_rate": 0.6,
+      "dependency_ms": 132,
+      "region": "ap-south"
+    },
+    {
+      "path": "/api/control-lane",
+      "p95_ms": 366,
+      "p99_ms": 632,
+      "error_rate": 2.4,
+      "dependency_ms": 205,
+      "region": "us-east"
+    },
+    {
+      "path": "/api/control-lane",
+      "p95_ms": 372,
+      "p99_ms": 648,
+      "error_rate": 2.1,
+      "dependency_ms": 214,
+      "region": "us-west"
+    }
+  ]
+}
